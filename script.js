@@ -5,8 +5,6 @@ let str = "";
 
 let arr = Array.from(buttons);
 
-console.log(arr);
-
 
 arr.forEach ( button => {
 
@@ -15,22 +13,18 @@ arr.forEach ( button => {
         if (e.target.innerHTML == '=') {
             str = eval(str);
             input.value = str;
-            // console.log(input.value);
         }
         else if (e.target.innerHTML == 'AC') {
             str = "";
             input.value = str;
-            // console.log(input.value);
         }
         else if ( e.target.innerHTML == 'DEL' ) {
             str = str.substring( 0, str.length - 1);
             input.value = str;
-            // console.log(input.value);
         }
         else {
             str += e.target.innerHTML;
             input.value = str;
-            // console.log(input.value);
         }
 
     } )
